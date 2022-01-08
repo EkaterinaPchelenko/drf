@@ -16,7 +16,7 @@ services:
     ports:
       - 8080:8080
     command:
-      bash -c "python manage.py migrate && python manage.py create_user && python manage.py runserver 0.0.0.0:8000"
+      bash -c "python manage.py migrate && python manage.py create_user && python manage.py create_project_and_todo && python manage.py runserver 0.0.0.0:8000"
     depends_on:
       - db
 
